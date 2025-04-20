@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Good and Evil Portfolio - Suman Muralidharan</title>
+    <link rel="icon" href="US_Ben_Temp_C.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .placeholder {
+            background-color: #333;
+            color: #888;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI for Good and Evil Portfolio - Suman Muralidharan</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to my portfolio for the AI course. Here, I will showcase various images, videos, and data generated using different AI tools.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <video controls width="80%" height="400px">
+                    <source src="Upi_AI.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <section>
+            <h2>Report from Google Gemini Deep Research</h2>
+            <embed src="BioImage Analysis with Fiji.pdf" type="application/pdf" width="100%" height="500px" style="border: 1px solid #333; overflow: auto;">
+        </section>
+        <section>
+            <h2>Plotting with AI</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <img src="US_Ben_Temp_C.png" alt="US Temperature in Celsius" style="width: 48%; border: 1px solid #333;">
+                <img src="US_Ben_Temp_FC.png" alt="US Temperature in Fahrenheit" style="width: 48%; border: 1px solid #333;">
+            </div>
+            <div style="margin-top: 20px;">
+                <iframe src="interactive_plot.html" width="100%" height="500px" style="border: none; margin-bottom: 20px;"></iframe>
+                <iframe src="interactive_plot_with_slider.html" width="100%" height="400px" style="border: none;"></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>How is your BP? <span style="font-size: 1.5em;">🔍</span></h2>
+            <div style="background-color: #1f1f1f; padding: 20px; border: 1px solid #333; border-radius: 5px;">
+                <div id="bp-widget" style="text-align: center;">
+                    <label for="systolic" style="color: #fff;">Systolic:</label>
+                    <input type="number" id="systolic" value="120" style="margin: 10px; padding: 5px;">
+                    <label for="diastolic" style="color: #fff;">Diastolic:</label>
+                    <input type="number" id="diastolic" value="80" style="margin: 10px; padding: 5px;">
+                    <button onclick="checkBP()" style="margin: 10px; padding: 5px; background-color: #333; color: #fff; border: 1px solid #555; border-radius: 5px;">Check BP</button>
+                    <div id="bp-result" style="margin-top: 20px; font-size: 20px; color: #fff;"></div>
+                </div>
+            </div>
+            <script>
+                function checkBP() {
+                    const systolic = parseInt(document.getElementById('systolic').value);
+                    const diastolic = parseInt(document.getElementById('diastolic').value);
+                    const resultDiv = document.getElementById('bp-result');
+
+                    if (90 <= systolic && systolic <= 120 && 60 <= diastolic && diastolic <= 80) {
+                        resultDiv.innerHTML = "<span style='color: green; font-size: 50px;'>😊</span> Your BP is normal!";
+                    } else {
+                        resultDiv.innerHTML = "<span style='color: red; font-size: 50px;'>😢</span> Your BP is outside the normal range!";
+                    }
+                }
+            </script>
+        </section>
+        <section>
+            <h2>Plot Population data on Geographical maps</h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <img src="Pop_Contour.png" alt="Population Contour" style="width: 48%; border: 1px solid #333;">
+                <div style="display: flex; flex-direction: column; width: 48%;">
+                    <img src="Pop_India.png" alt="Population India" style="width: 100%; height: 50%; border: 1px solid #333; margin-bottom: 10px; object-fit: cover;">
+                    <img src="Pop_Karnataka.png" alt="Population Karnataka" style="width: 100%; height: 20%; border: 1px solid #333; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 style="color: red; font-weight: bold; font-size: 1.8em;">Breaking: Women to Score More Goals Than Men... Only If We Had a Time Machine <span style="font-size: 1.5em;">🥲</span></h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="Predictions_football_MvsW.png" alt="Predictions: Football Men vs Women" style="width: 80%; border: 1px solid #333;">
+            </div>
+        </section>
+        <section>
+            <h2>Convert Images to Webpages <span style="font-size: 1.5em;">😲</span></h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <img src="13-03-2025_class/Student form.png" alt="Student Form" style="width: 48%; border: 1px solid #333;">
+                <iframe src="13-03-2025_class/index.html" style="width: 48%; height: 900px; border: 1px solid #333;"></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>Infographics</h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <img src="Infographic_Tom_Jerry.webp" alt="Infographic: Tom and Jerry" style="width: 48%; border: 1px solid #333;">
+                <img src="Infographic of unwrapping a mummy_2.webp" alt="Infographic: Unwrapping a Mummy" style="width: 48%; border: 1px solid #333;">
+            </div>
+        </section>
+        <section>
+            <h2>Animation, Transition and Logo</h2>
+            <div style="display: grid; grid-template-columns: 48% 48%; grid-gap: 4%;">
+                <img src="Heart_crying_1.gif" alt="Heart Crying Animation" style="width: 100%; height: 80%; border: 1px solid #333; margin-bottom: 5px;">
+                <img src="Logo_DBT.png" alt="DBT Logo" style="width: 100%; height: 80%; border: 1px solid #333; margin-bottom: 5px;">
+                <img src="Landscape_transition.gif" alt="Landscape Transition" style="width: 100%; border: 1px solid #333;">
+                <img src="batter_transition.gif" alt="Batter Transition" style="width: 100%; border: 1px solid #333;">
+            </div>
+        </section>
+        <section>
+            <h2>Cartoonize Yourself</h2>
+            <div style="display: flex; align-items: center;">
+                <img src="Picture_of_myself.jpg" alt="Picture of Myself" style="width: 25%; border: 1px solid #333;">
+                <span style="font-size: 3.5em; margin: 0 40px;">➡️</span>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; width: 60%;">
+                    <img src="Cartoonize_Yourself_my_pic.webp" alt="Cartoonized Myself" style="width: 30%; margin-right: 10px;">
+                    <img src="bizarre_image_of_myself.png" alt="Bizarre Image of Myself" style="width: 30%; margin-right: 10px;">
+                    <img src="Cartoonize_Yourself_powerpuff girls.webp" alt="Powerpuff Cartoon" style="width: 30%;">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>AI Music - We...Will...We...Will...Bot You <span style="font-size: 1.5em; color: #00FF00;">🎵🤘</span></h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <video controls width="80%" height="400px">
+                    <source src="AI_Music_Lyric_Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <section>
+            <h2 style="color: orange; font-weight: bold; font-size: 1.8em; text-align: center;">AI Approved This Promotion (We Swear) <span style="font-size: 1.5em;">😅🔥</span></h2>
+            <div style="position: relative; text-align: center;">
+                <img src="Fireworks.gif" alt="Fireworks Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+                <img src="Promotion_BDA.PNG" alt="Promotion" style="width: 80%; border: 1px solid #333; position: relative; z-index: 1;">
+            </div>
+        </section>
+        <section>
+            <hr style="border: 1px solid #333; margin: 20px 0;">
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="Robot_Namaste.gif" alt="Robot Namaste" style="width: 50%; height: 40%; max-height: none; background-color: black;">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f4e8;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .section {
+            background: #f4a261;
+            padding: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background: #264653;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="formContainer">
+        <h2>Student Registration Form</h2>
+        
+        <div class="section">Student Information</div>
+        <label>Full Name: <input type="text" id="name"></label>
+        <label>Date of Birth: <input type="date" id="dob"></label>
+        <label>Gender:
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </label>
+        <label>Nationality: <input type="text" id="nationality"></label>
+        <label>Contact Information: <input type="text" id="contact"></label>
+        
+        <div class="section">Parent/Guardian Information</div>
+        <label>Parent/Guardian Name(s): <input type="text" id="guardian"></label>
+        <label>Contact Information: <input type="text" id="guardianContact"></label>
+        
+        <div class="section">Education Information</div>
+        <label>School/Institution Name: <input type="text" id="school"></label>
+        <label>Graduation Date: <input type="date" id="gradDate"></label>
+        
+        <button onclick="saveAsPDF()">Save as PDF</button>
+    </div>
+
+    <script>
+        function saveAsPDF() {
+            html2canvas(document.getElementById('formContainer')).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                doc.addImage(imgData, 'PNG', 10, 10, 190, 0);
+                doc.save('Student_Registration_Form.pdf');
+            });
+        }
+    </script>
+</body>
+</html>
